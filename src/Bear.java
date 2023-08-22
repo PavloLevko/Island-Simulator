@@ -4,4 +4,5 @@ public class Bear extends Predators{
     public String getBearIcon() {
         return bearIcon;
     }
+
 }

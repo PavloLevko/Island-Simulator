@@ -1,15 +1,11 @@
-public class Island {
-    private int[][] locations;
+import java.util.List;
 
-    public Island(int width, int length) {
-        locations = new int[width][length];
-    }
+public class Island extends Animal{
+    private int [][] locationsOfIsland;
+    private int widthIsland;
+    private int lengthIsland;
 
-    public void setLocations(int[][] locations) {
-        this.locations = locations;
-    }
-
-    public int[][] getLocations() {
-        return locations;
+    public Island(int[][] locationsOfIsland) {
+        this.locationsOfIsland = locationsOfIsland;
     }
 }
