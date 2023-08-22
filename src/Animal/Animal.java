@@ -1,3 +1,5 @@
+package Animal;
+
 public abstract class Animal {
     public void eat (){
     }
@@ -5,8 +7,6 @@ public abstract class Animal {
     }
     public void move (){
     }
-    public void getIcon(){
-
-        return icon;
+    public void dead(){
     }
 }

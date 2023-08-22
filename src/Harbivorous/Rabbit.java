@@ -1,9 +1,0 @@
-package Harbivorous;
-
-public class Rabbit extends Harbivorous {
-    private final String rabbitIcon = "\uD83D\uDC07";
-
-    public String getRabbitIcon() {
-        return rabbitIcon;
-    }
-}

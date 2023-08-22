@@ -4,4 +4,11 @@ public class Plants {
     public String getPlantsIcon() {
         return plantsIcon;
     }
+
+    @Override
+    public String toString() {
+        return "Plants{" +
+                "plantsIcon='" + plantsIcon + '\'' +
+                '}';
+    }
 }
