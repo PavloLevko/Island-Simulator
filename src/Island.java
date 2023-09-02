@@ -1,9 +1,12 @@
 import Animal.Animal;
 
+import java.util.List;
+
 public class Island {
     private int widthIsland;
     private int lengthIsland;
     int[][] sectionOfTheIsland;
+    ListOfAnimals listOfAnimals = new ListOfAnimals();
     public Island(int widthIsland, int lengthIsland) {
         this.widthIsland = widthIsland;
         this.lengthIsland = lengthIsland;
@@ -15,10 +18,10 @@ public class Island {
         return widthIsland;
     }
     public void fillAnimalsToArray() {
-        sectionOfTheIsland = new  int[widthIsland][lengthIsland];
+        sectionOfTheIsland = new int[widthIsland][lengthIsland];
         for (int i = 0; i < lengthIsland-1; i++) {
             for (int j = 0; j < widthIsland-1; j++) {
-                sectionOfTheIsland[i][j] = 1;
+                sectionOfTheIsland[i][j] = listOfAnimals.createRandomAnimal();
             }
         }
     }

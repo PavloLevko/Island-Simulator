@@ -1,19 +1,19 @@
 import  Animal.Animal;
-import Animal.Boar;
-import Animal.Bear;
-import Animal.Buffalo;
-import Animal.Caterpillar;
-import Animal.Duck;
-import Animal.Deer;
-import Animal.Eagle;
-import Animal.Fox;
-import Animal.Goat;
-import Animal.Horse;
-import Animal.Mouse;
-import Animal.Rabbit;
-import Animal.Sheep;
-import Animal.Snake;
-import Animal.Wolf;
+import Animal.Herbivores.Boar;
+import Animal.Herbivores.Bear;
+import Animal.Herbivores.Buffalo;
+import Animal.Herbivores.Caterpillar;
+import Animal.Herbivores.Duck;
+import Animal.Herbivores.Deer;
+import Animal.Predatores.Eagle;
+import Animal.Predatores.Fox;
+import Animal.Herbivores.Goat;
+import Animal.Herbivores.Horse;
+import Animal.Herbivores.Mouse;
+import Animal.Herbivores.Rabbit;
+import Animal.Herbivores.Sheep;
+import Animal.Predatores.Snake;
+import Animal.Predatores.Wolf;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,13 +39,14 @@ public class ListOfAnimals extends Animal {
         animalList.add(new Sheep());
         animalList.add(new Wolf());
     }
+
     public List<Animal> getAnimalList() {
         return animalList;
     }
-
-    public int createRandomAnimal(List<Animal> animals){
+ListOfAnimals listOfAnimals = new ListOfAnimals();
+    public int createRandomAnimal(){
         Random random = new Random();
-        animalNumber = random.nextInt(animals.size());
+        animalNumber = random.nextInt(listOfAnimals.animalList.size());
         return animalNumber;
     }
 

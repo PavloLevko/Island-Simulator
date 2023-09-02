@@ -1,4 +1,4 @@
-package Animal;
+package Animal.Predatores;
 
 import Animal.Animal;
 
