@@ -8,4 +8,29 @@ public class Duck extends Herbivores {
     private final int maxAnimalsInCell = 200;
     private final int speedOfAnimal = 4;
     private final double weightOfFullSaturation = 0.15d;
+    private boolean isAlive = true;
+
+    public String getDuckIcon() {
+        return duckIcon;
+    }
+
+    public double getWeightOfAnimal() {
+        return weightOfAnimal;
+    }
+
+    public int getMaxAnimalsInCell() {
+        return maxAnimalsInCell;
+    }
+
+    public int getSpeedOfAnimal() {
+        return speedOfAnimal;
+    }
+
+    public double getWeightOfFullSaturation() {
+        return weightOfFullSaturation;
+    }
+
+    public boolean isAlive() {
+        return isAlive;
+    }
 }
