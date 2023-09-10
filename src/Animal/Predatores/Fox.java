@@ -7,28 +7,12 @@ public class Fox extends Predators {
     private final int speedOfAnimal = 2;
     private final double weightOfFullSaturation = 2d;
     private boolean isAlive = true;
-
-    public String getFoxIcon() {
-        return foxIcon;
-    }
-
-    public double getWeightOfAnimal() {
-        return weightOfAnimal;
-    }
-
-    public int getMaxAnimalsInCell() {
-        return maxAnimalsInCell;
-    }
-
-    public int getSpeedOfAnimal() {
-        return speedOfAnimal;
-    }
-
-    public double getWeightOfFullSaturation() {
-        return weightOfFullSaturation;
-    }
-
-    public boolean isAlive() {
-        return isAlive;
+    public Fox(){
+        setAnimalIcon(foxIcon);
+        setWeightOfAnimal(weightOfAnimal);
+        setMaxAnimalsInCell(maxAnimalsInCell);
+        setSpeedOfAnimal(speedOfAnimal);
+        setWeightOfFullSaturation(weightOfFullSaturation);
+        setAlive(isAlive);
     }
 }

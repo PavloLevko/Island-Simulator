@@ -9,28 +9,13 @@ public class Boar extends Herbivores {
     private final int speedOfAnimal = 2;
     private final double weightOfFullSaturation = 50d;
     private boolean isAlive = true;
-
-    public String getBoarIcon() {
-        return boarIcon;
+    public Boar(){
+        setAnimalIcon(boarIcon);
+        setWeightOfAnimal(weightOfAnimal);
+        setMaxAnimalsInCell(maxAnimalsInCell);
+        setSpeedOfAnimal(speedOfAnimal);
+        setWeightOfFullSaturation(weightOfFullSaturation);
+        setAlive(isAlive);
     }
 
-    public double getWeightOfAnimal() {
-        return weightOfAnimal;
-    }
-
-    public int getMaxAnimalsInCell() {
-        return maxAnimalsInCell;
-    }
-
-    public int getSpeedOfAnimal() {
-        return speedOfAnimal;
-    }
-
-    public double getWeightOfFullSaturation() {
-        return weightOfFullSaturation;
-    }
-
-    public boolean isAlive() {
-        return isAlive;
-    }
 }

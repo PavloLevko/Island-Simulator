@@ -9,28 +9,12 @@ public class Deer extends Herbivores {
     private final int speedOfAnimal = 4;
     private final double weightOfFullSaturation = 50;
     private boolean isAlive = true;
-
-    public String getDeerIcon() {
-        return deerIcon;
-    }
-
-    public double getWeightOfAnimal() {
-        return weightOfAnimal;
-    }
-
-    public int getMaxAnimalsInCell() {
-        return maxAnimalsInCell;
-    }
-
-    public int getSpeedOfAnimal() {
-        return speedOfAnimal;
-    }
-
-    public double getWeightOfFullSaturation() {
-        return weightOfFullSaturation;
-    }
-
-    public boolean isAlive() {
-        return isAlive;
+    public Deer(){
+        setAnimalIcon(deerIcon);
+        setWeightOfAnimal(weightOfAnimal);
+        setMaxAnimalsInCell(maxAnimalsInCell);
+        setSpeedOfAnimal(speedOfAnimal);
+        setWeightOfFullSaturation(weightOfFullSaturation);
+        setAlive(isAlive);
     }
 }

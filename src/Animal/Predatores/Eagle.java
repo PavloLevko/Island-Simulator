@@ -8,28 +8,12 @@ public class Eagle extends Predators {
     private final int speedOfAnimal = 3;
     private final double weightOfFullSaturation = 1d;
     private boolean isAlive = true;
-
-    public String getEagleIcon() {
-        return eagleIcon;
-    }
-
-    public double getWeightOfAnimal() {
-        return weightOfAnimal;
-    }
-
-    public int getMaxAnimalsInCell() {
-        return maxAnimalsInCell;
-    }
-
-    public int getSpeedOfAnimal() {
-        return speedOfAnimal;
-    }
-
-    public double getWeightOfFullSaturation() {
-        return weightOfFullSaturation;
-    }
-
-    public boolean isAlive() {
-        return isAlive;
+    public Eagle(){
+        setAnimalIcon(eagleIcon);
+        setWeightOfAnimal(weightOfAnimal);
+        setMaxAnimalsInCell(maxAnimalsInCell);
+        setSpeedOfAnimal(speedOfAnimal);
+        setWeightOfFullSaturation(weightOfFullSaturation);
+        setAlive(isAlive);
     }
 }

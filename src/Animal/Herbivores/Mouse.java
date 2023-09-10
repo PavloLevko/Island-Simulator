@@ -9,28 +9,12 @@ public class Mouse extends Herbivores {
     private final int speedOfAnimal = 1;
     private final double weightOfFullSaturation = 0.01d;
     private boolean isAlive = true;
-
-    public String getMouseIcon() {
-        return mouseIcon;
-    }
-
-    public double getWeightOfAnimal() {
-        return weightOfAnimal;
-    }
-
-    public int getMaxAnimalsInCell() {
-        return maxAnimalsInCell;
-    }
-
-    public int getSpeedOfAnimal() {
-        return speedOfAnimal;
-    }
-
-    public double getWeightOfFullSaturation() {
-        return weightOfFullSaturation;
-    }
-
-    public boolean isAlive() {
-        return isAlive;
+    public Mouse(){
+        setAnimalIcon(mouseIcon);
+        setWeightOfAnimal(weightOfAnimal);
+        setMaxAnimalsInCell(maxAnimalsInCell);
+        setSpeedOfAnimal(speedOfAnimal);
+        setWeightOfFullSaturation(weightOfFullSaturation);
+        setAlive(isAlive);
     }
 }

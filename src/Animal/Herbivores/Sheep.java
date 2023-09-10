@@ -9,28 +9,12 @@ public class Sheep extends Herbivores {
     private final int speedOfAnimal = 3;
     private final double weightOfFullSaturation = 15d;
     private boolean isAlive = true;
-
-    public String getSheepIcon() {
-        return sheepIcon;
-    }
-
-    public double getWeightOfAnimal() {
-        return weightOfAnimal;
-    }
-
-    public int getMaxAnimalsInCell() {
-        return maxAnimalsInCell;
-    }
-
-    public int getSpeedOfAnimal() {
-        return speedOfAnimal;
-    }
-
-    public double getWeightOfFullSaturation() {
-        return weightOfFullSaturation;
-    }
-
-    public boolean isAlive() {
-        return isAlive;
+    public Sheep(){
+        setAnimalIcon(sheepIcon);
+        setWeightOfAnimal(weightOfAnimal);
+        setMaxAnimalsInCell(maxAnimalsInCell);
+        setSpeedOfAnimal(speedOfAnimal);
+        setWeightOfFullSaturation(weightOfFullSaturation);
+        setAlive(isAlive);
     }
 }

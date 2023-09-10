@@ -1,34 +1,32 @@
 package Animal.Herbivores;
 
+import Animal.Animal;
+import Animal.Predatores.Snake;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class Bear extends Herbivores {
     private final String bearIcon = "\uD83D\uDC3B";
+
     private final double weightOfAnimal = 500d;
     private final int maxAnimalsInCell = 5;
     private final int speedOfAnimal = 2;
     private final double weightOfFullSaturation = 80d;
     private boolean isAlive = true;
 
-    public String getBearIcon() {
-        return bearIcon;
-    }
+    private Map<Animal, Integer> whoCanBeEaten = new HashMap<Animal, Integer>();
 
-    public double getWeightOfAnimal() {
-        return weightOfAnimal;
-    }
 
-    public int getMaxAnimalsInCell() {
-        return maxAnimalsInCell;
-    }
-
-    public int getSpeedOfAnimal() {
-        return speedOfAnimal;
-    }
-
-    public double getWeightOfFullSaturation() {
-        return weightOfFullSaturation;
-    }
-
-    public boolean isAlive() {
-        return isAlive;
+    public Bear(){
+        setAnimalIcon(bearIcon);
+        setWeightOfAnimal(weightOfAnimal);
+        setMaxAnimalsInCell(maxAnimalsInCell);
+        setSpeedOfAnimal(speedOfAnimal);
+        setWeightOfFullSaturation(weightOfFullSaturation);
+        setAlive(isAlive);
+        whoCanBeEaten = Map.of(new Snake(),80,new Horse(),40,new Deer(),80,
+                new Rabbit(),80,new Mouse(),90,new Goat(),60,
+                new Sheep(),70, new Boar(),50,new Buffalo(),20,new Duck(),10);
     }
 }

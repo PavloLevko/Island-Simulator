@@ -9,28 +9,12 @@ public class Caterpillar extends Herbivores {
     private final int speedOfAnimal = 0;
     private final double weightOfFullSaturation = 0d;
     private boolean isAlive = true;
-
-    public String getCaterpillarIcon() {
-        return caterpillarIcon;
-    }
-
-    public double getWeightOfAnimal() {
-        return weightOfAnimal;
-    }
-
-    public int getMaxAnimalsInCell() {
-        return maxAnimalsInCell;
-    }
-
-    public int getSpeedOfAnimal() {
-        return speedOfAnimal;
-    }
-
-    public double getWeightOfFullSaturation() {
-        return weightOfFullSaturation;
-    }
-
-    public boolean isAlive() {
-        return isAlive;
+    public Caterpillar(){
+        setAnimalIcon(caterpillarIcon);
+        setWeightOfAnimal(weightOfAnimal);
+        setMaxAnimalsInCell(maxAnimalsInCell);
+        setSpeedOfAnimal(speedOfAnimal);
+        setWeightOfFullSaturation(weightOfFullSaturation);
+        setAlive(isAlive);
     }
 }
