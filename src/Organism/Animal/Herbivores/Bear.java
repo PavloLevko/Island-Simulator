@@ -1,21 +1,22 @@
-package Animal.Herbivores;
+package Organism.Animal.Herbivores;
 
-import Animal.Animal;
-import Animal.Predatores.Snake;
+import Organism.Animal.Animal;
+import Organism.Animal.Predatores.Snake;
+import Organism.Organism;
+
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Bear extends Herbivores {
     private final String bearIcon = "\uD83D\uDC3B";
-
     private final double weightOfAnimal = 500d;
     private final int maxAnimalsInCell = 5;
     private final int speedOfAnimal = 2;
     private final double weightOfFullSaturation = 80d;
     private boolean isAlive = true;
 
-    private Map<Animal, Integer> whoCanBeEaten = new HashMap<Animal, Integer>();
+    private Map<Organism, Integer> whoCanBeEaten = new HashMap<Organism, Integer>();
 
 
     public Bear(){
@@ -29,4 +30,5 @@ public class Bear extends Herbivores {
                 new Rabbit(),80,new Mouse(),90,new Goat(),60,
                 new Sheep(),70, new Boar(),50,new Buffalo(),20,new Duck(),10);
     }
+
 }

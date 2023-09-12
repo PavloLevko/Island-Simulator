@@ -1,9 +1,9 @@
-import Animal.Animal;
-import Animal.Herbivores.*;
-import Animal.Predatores.Eagle;
-import Animal.Predatores.Fox;
-import Animal.Predatores.Snake;
-import Animal.Predatores.Wolf;
+import Organism.Animal.Animal;
+import Organism.Animal.Herbivores.*;
+import Organism.Animal.Predatores.Eagle;
+import Organism.Animal.Predatores.Fox;
+import Organism.Animal.Predatores.Snake;
+import Organism.Animal.Predatores.Wolf;
 
 import java.util.ArrayList;
 import java.util.List;

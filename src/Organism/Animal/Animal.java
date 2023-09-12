@@ -1,12 +1,22 @@
-package Animal;
+package Organism.Animal;
 
-public abstract class Animal extends Organism{
+import Organism.Organism;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public abstract class Animal extends Organism {
     private String animalIcon;
     private double weightOfAnimal;
     private int maxAnimalsInCell;
     private int speedOfAnimal;
     private double weightOfFullSaturation;
     private boolean isAlive;
+    private Map<Organism, Integer> whoCanBeEaten = new HashMap<Organism, Integer>();
+
+    public Map<Organism, Integer> getWhoCanBeEaten() {
+        return whoCanBeEaten;
+    }
 
     public void eat (){
     }

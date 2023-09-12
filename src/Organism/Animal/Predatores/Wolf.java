@@ -1,4 +1,10 @@
-package Animal.Predatores;
+package Organism.Animal.Predatores;
+
+import Organism.Animal.Herbivores.*;
+import Organism.Organism;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Wolf extends Predators {
 
@@ -8,6 +14,7 @@ public class Wolf extends Predators {
     private final int speedOfAnimal = 3;
     private final double weightOfFullSaturation = 8d;
     private boolean isAlive = true;
+    private Map<Organism, Integer> whoCanBeEaten = new HashMap<Organism, Integer>();
     public Wolf(){
         setAnimalIcon(wolfIcon);
         setWeightOfAnimal(weightOfAnimal);
@@ -15,5 +22,8 @@ public class Wolf extends Predators {
         setSpeedOfAnimal(speedOfAnimal);
         setWeightOfFullSaturation(weightOfFullSaturation);
         setAlive(isAlive);
+        whoCanBeEaten = Map.of(new Horse(),10,new Deer(),15,new Rabbit(),60,
+                new Mouse(),80,new Goat(),60,new Sheep(),70,new Boar(),15,
+                new Buffalo(),10,new Duck(),40);
     }
 }

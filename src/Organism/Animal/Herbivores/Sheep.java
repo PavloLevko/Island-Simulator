@@ -1,6 +1,9 @@
-package Animal.Herbivores;
+package Organism.Animal.Herbivores;
 
-import Animal.Herbivores.Herbivores;
+import Organism.Organism;
+import Organism.Plants;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Sheep extends Herbivores {
     private final String sheepIcon = "\uD83D\uDC11";
@@ -9,6 +12,7 @@ public class Sheep extends Herbivores {
     private final int speedOfAnimal = 3;
     private final double weightOfFullSaturation = 15d;
     private boolean isAlive = true;
+    private Map<Organism, Integer> whoCanBeEaten = new HashMap<Organism, Integer>();
     public Sheep(){
         setAnimalIcon(sheepIcon);
         setWeightOfAnimal(weightOfAnimal);
@@ -16,5 +20,6 @@ public class Sheep extends Herbivores {
         setSpeedOfAnimal(speedOfAnimal);
         setWeightOfFullSaturation(weightOfFullSaturation);
         setAlive(isAlive);
+        whoCanBeEaten = Map.of(new Plants(),100);
     }
 }
