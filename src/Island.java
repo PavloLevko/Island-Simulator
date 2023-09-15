@@ -1,30 +1,35 @@
+import Organism.Animal.Animal;
+import Organism.Organism;
+
+import java.util.Random;
+
 public class Island {
-    private int widthIsland;
-    private int lengthIsland;
-    Object[][] sectionOfTheIsland;
-    ListOfAnimals listOfAnimals = new ListOfAnimals();
+    Location location = new Location();
+    Random random = new Random();
+    ListOfOrganism listOfOrganism = new ListOfOrganism();
+   Organism [][] calls;
 
-    public int getWidthIsland() {
-        return widthIsland;
+    public Island(int x, int y) {
+        calls = new Organism[x][y];
     }
 
-    public void setWidthIsland(int widthIsland) {
-        this.widthIsland = widthIsland;
+    public void initialIsland(){
+       for (int i = 0; i < calls.length; i++) {
+           for (int j = 0; j < calls[i].length; j++) {
+               int randomOrganism = random.nextInt(listOfOrganism.list.length);
+
+               calls[i][j]= listOfOrganism.list[randomOrganism];
+           }
+       }}
+    public void getOrganism() {
+        for (int i = 0; i < calls.length; i++) {
+            for (int j = 0; j < calls[i].length; j++) {
+                System.out.print(calls[i][j] + "\t");
+            }
+            System.out.println();
+        }
     }
 
-    public int getLengthIsland() {
-        return lengthIsland;
-    }
 
-    public void setLengthIsland(int lengthIsland) {
-        this.lengthIsland = lengthIsland;
-    }
-
-    public Object[][] getSectionOfTheIsland() {
-        return sectionOfTheIsland;
-    }
-
-    public void setSectionOfTheIsland(Object[][] sectionOfTheIsland) {
-        this.sectionOfTheIsland = sectionOfTheIsland;
-    }
 }
+

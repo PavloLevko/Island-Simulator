@@ -31,4 +31,7 @@ public class Bear extends Herbivores {
                 new Sheep(),70, new Boar(),50,new Buffalo(),20,new Duck(),10);
     }
 
+    public void move(){
+    }
+
 }
