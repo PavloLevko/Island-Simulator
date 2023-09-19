@@ -4,6 +4,7 @@ import Organism.Organism;
 import Organism.Plants;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 public class Deer extends Herbivores {
     private final String deerIcon = "\uD83E\uDD8C";
@@ -21,5 +22,18 @@ public class Deer extends Herbivores {
         setWeightOfFullSaturation(weightOfFullSaturation);
         setAlive(isAlive);
         whoCanBeEaten = Map.of(new Plants(),100);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Deer deer = (Deer) o;
+        return Double.compare(weightOfAnimal, deer.weightOfAnimal) == 0 && maxAnimalsInCell == deer.maxAnimalsInCell && speedOfAnimal == deer.speedOfAnimal && Double.compare(weightOfFullSaturation, deer.weightOfFullSaturation) == 0 && isAlive == deer.isAlive && Objects.equals(deerIcon, deer.deerIcon) && Objects.equals(whoCanBeEaten, deer.whoCanBeEaten);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(deerIcon, weightOfAnimal, maxAnimalsInCell, speedOfAnimal, weightOfFullSaturation, isAlive, whoCanBeEaten);
     }
 }

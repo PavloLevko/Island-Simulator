@@ -1,35 +1,35 @@
-import Organism.Animal.Animal;
 import Organism.Organism;
 
+import java.util.List;
 import java.util.Random;
 
 public class Island {
+    public static volatile Random random = new Random();
+    ListOrganism listOfOrganism = new ListOrganism();
     Location location = new Location();
-    Random random = new Random();
-    ListOfOrganism listOfOrganism = new ListOfOrganism();
-   Organism [][] calls;
+    Organism organism = new Organism();
+    private Organism[][] calls;
 
-    public Island(int x, int y) {
-        calls = new Organism[x][y];
+    public Island(int width, int length, List<Organism> list) {
+        calls = new Organism[width][length];
+        initialIsland(list);
     }
-
-    public void initialIsland(){
-       for (int i = 0; i < calls.length; i++) {
-           for (int j = 0; j < calls[i].length; j++) {
-               int randomOrganism = random.nextInt(listOfOrganism.list.length);
-
-               calls[i][j]= listOfOrganism.list[randomOrganism];
-           }
-       }}
-    public void getOrganism() {
-        for (int i = 0; i < calls.length; i++) {
-            for (int j = 0; j < calls[i].length; j++) {
-                System.out.print(calls[i][j] + "\t");
+         public void initialIsland(List<Organism>list){
+            for (int i = 0; i < calls.length; i++) {
+                for (int j = 0; j < calls[i].length; j++) {
+                    int randomOrganism = random.nextInt(list.size());
+                  calls[i][j] = list.get(randomOrganism);
+                }
             }
-            System.out.println();
+        }
+        public void getOrganism () {
+            for (int i = 0; i < calls.length; i++) {
+                for (int j = 0; j < calls[i].length; j++) {
+                    System.out.print(calls[i][j] + "\t");
+                }
+                System.out.println();
+            }
         }
     }
 
-
-}
 

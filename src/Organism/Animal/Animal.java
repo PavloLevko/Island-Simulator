@@ -11,6 +11,7 @@ public abstract class Animal extends Organism {
     private int maxAnimalsInCell;
     private int speedOfAnimal;
     private double weightOfFullSaturation;
+    private int health;
     private boolean isAlive;
     private Map<Organism, Integer> whoCanBeEaten = new HashMap<Organism, Integer>();
 
@@ -73,5 +74,13 @@ public abstract class Animal extends Organism {
 
     public void setAlive(boolean alive) {
         isAlive = alive;
+    }
+
+    public int getHealth() {
+        return health;
+    }
+
+    public void setHealth(int health) {
+        this.health = health;
     }
 }
